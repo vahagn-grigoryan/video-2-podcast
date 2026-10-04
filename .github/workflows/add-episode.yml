@@ -1,0 +1,37 @@
+name: Add episode
+
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: Video URL (VK Video)
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  add:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -U yt-dlp
+      - id: add
+        run: python podcast.py "$VIDEO_URL"
+        env:
+          PODCAST_REPO: ${{ github.repository }}
+          VIDEO_URL: ${{ inputs.url }}
+      - name: Upload audio as a release asset
+        run: gh release create "ep-${{ steps.add.outputs.id }}" "out/${{ steps.add.outputs.id }}.m4a" --title "${{ steps.add.outputs.id }}" --notes "" || gh release upload "ep-${{ steps.add.outputs.id }}" "out/${{ steps.add.outputs.id }}.m4a" --clobber
+        env:
+          GH_TOKEN: ${{ github.token }}
+      - name: Commit feed
+        run: |
+          git config user.name github-actions
+          git config user.email actions@github.com
+          git add feed.xml episodes.json
+          git commit -m "Add episode ${{ steps.add.outputs.id }}"
+          git push
