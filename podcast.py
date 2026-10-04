@@ -3,8 +3,11 @@
 
     python podcast.py <url>
 
+    python podcast.py --playlist <playlist url> [--latest 3]
+
 Downloads the audio with yt-dlp, adds the episode to
-episodes.json and regenerates feed.xml. Enclosure URLs point at GitHub
+episodes.json and regenerates feed.xml. With --playlist it adds the latest
+entries that are not in episodes.json yet. Enclosure URLs point at GitHub
 Release assets: https://github.com/<REPO>/releases/download/ep-<id>/<id>.m4a
 """
 import argparse
@@ -55,6 +58,13 @@ def download(url: str) -> dict:
     }
 
 
+def new_playlist_urls(playlist: str, latest: int, known: set[str]) -> list[str]:
+    """URLs of the newest playlist entries we do not have yet, oldest first."""
+    cmd = [sys.executable, "-m", "yt_dlp", "--flat-playlist", "--playlist-end", str(latest), "--print", "id", playlist]
+    ids = subprocess.run(cmd, check=True, text=True, stdout=subprocess.PIPE).stdout.split()
+    return [f"https://vkvideo.ru/video{i}" for i in reversed(ids) if i not in known]
+
+
 def write_feed(episodes: list[dict]) -> None:
     items = []
     for e in episodes[:KEEP]:
@@ -76,6 +86,7 @@ def write_feed(episodes: list[dict]) -> None:
     <link>{escape(SITE)}</link>
     <description>{escape(TITLE)}</description>
     <language>ru</language>
+    <itunes:image href="{escape(SITE)}cover.jpg"/>
     <itunes:explicit>false</itunes:explicit>
 {chr(10).join(items)}
   </channel>
@@ -85,23 +96,34 @@ def write_feed(episodes: list[dict]) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("url")
-    url = parser.parse_args().url
+    parser.add_argument("url", nargs="?")
+    parser.add_argument("--playlist")
+    parser.add_argument("--latest", type=int, default=3)
+    args = parser.parse_args()
+    if not args.url and not args.playlist:
+        parser.error("give a video url or --playlist")
 
     episodes = json.loads(EPISODES.read_text()) if EPISODES.exists() else []
-    episode = download(url)
-    episodes = [e for e in episodes if e["id"] != episode["id"]]
-    episodes.append(episode)
-    episodes.sort(key=lambda e: e["published"], reverse=True)
+    urls = [args.url] if args.url else new_playlist_urls(args.playlist, args.latest, {e["id"] for e in episodes})
 
+    added = []
+    for url in urls:
+        episode = download(url)
+        episodes = [e for e in episodes if e["id"] != episode["id"]]
+        episodes.append(episode)
+        added.append(episode["id"])
+        print(f"Added {episode['id']}: {episode['title']}")
+    if not added:
+        print("No new episodes")
+
+    episodes.sort(key=lambda e: e["published"], reverse=True)
     EPISODES.write_text(json.dumps(episodes, ensure_ascii=False, indent=2) + "\n")
     write_feed(episodes)
 
-    # Lets the GitHub workflow pick up the id for the release tag.
+    # Lets the GitHub workflow upload each new file as a release asset.
     if os.environ.get("GITHUB_OUTPUT"):
         with open(os.environ["GITHUB_OUTPUT"], "a") as f:
-            f.write(f"id={episode['id']}\n")
-    print(f"Added {episode['id']}: {episode['title']}")
+            f.write(f"ids={' '.join(added)}\n")
 
 
 if __name__ == "__main__":

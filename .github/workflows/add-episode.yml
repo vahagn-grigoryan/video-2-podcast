@@ -1,14 +1,26 @@
 name: Add episode
 
 on:
+  schedule:
+    # Episodes land Fridays ~05:45 UTC and Tuesday evenings (15:40-19:52 UTC).
+    - cron: "20 6-8 * * 5"
+    - cron: "20 16-22 * * 2"
+    # Daily catch-up in case a run was late or skipped.
+    - cron: "20 12 * * *"
   workflow_dispatch:
     inputs:
       url:
-        description: Video URL (VK Video)
-        required: true
+        description: Video URL (leave empty to sync the playlist)
+        required: false
 
 permissions:
   contents: write
+
+concurrency:
+  group: feed
+
+env:
+  PLAYLIST: https://vkvideo.ru/playlist/-211437014_7
 
 jobs:
   add:
@@ -20,18 +32,30 @@ jobs:
           python-version: "3.12"
       - run: pip install -U yt-dlp
       - id: add
-        run: python podcast.py "$VIDEO_URL"
+        run: |
+          if [ -n "$VIDEO_URL" ]; then
+            python podcast.py "$VIDEO_URL"
+          else
+            python podcast.py --playlist "$PLAYLIST" --latest 3
+          fi
         env:
           PODCAST_REPO: ${{ github.repository }}
           VIDEO_URL: ${{ inputs.url }}
-      - name: Upload audio as a release asset
-        run: gh release create "ep-${{ steps.add.outputs.id }}" "out/${{ steps.add.outputs.id }}.m4a" --title "${{ steps.add.outputs.id }}" --notes "" || gh release upload "ep-${{ steps.add.outputs.id }}" "out/${{ steps.add.outputs.id }}.m4a" --clobber
+      - name: Upload audio as release assets
+        run: |
+          for id in $IDS; do
+            gh release create "ep-$id" "out/$id.m4a" --title "$id" --notes "" || gh release upload "ep-$id" "out/$id.m4a" --clobber
+          done
         env:
+          IDS: ${{ steps.add.outputs.ids }}
           GH_TOKEN: ${{ github.token }}
       - name: Commit feed
         run: |
           git config user.name github-actions
           git config user.email actions@github.com
           git add feed.xml episodes.json
-          git commit -m "Add episode ${{ steps.add.outputs.id }}"
+          git diff --cached --quiet && exit 0
+          git commit -m "Add episodes: $IDS"
           git push
+        env:
+          IDS: ${{ steps.add.outputs.ids }}
