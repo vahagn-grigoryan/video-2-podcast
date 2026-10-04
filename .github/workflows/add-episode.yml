@@ -36,7 +36,7 @@ jobs:
           if [ -n "$VIDEO_URL" ]; then
             python podcast.py "$VIDEO_URL"
           else
-            python podcast.py --playlist "$PLAYLIST" --latest 3
+            python podcast.py --playlist "$PLAYLIST"
           fi
         env:
           PODCAST_REPO: ${{ github.repository }}
@@ -48,6 +48,14 @@ jobs:
           done
         env:
           IDS: ${{ steps.add.outputs.ids }}
+          GH_TOKEN: ${{ github.token }}
+      - name: Delete old audio files
+        run: |
+          for id in $REMOVED; do
+            gh release delete "ep-$id" --cleanup-tag --yes || true
+          done
+        env:
+          REMOVED: ${{ steps.add.outputs.removed }}
           GH_TOKEN: ${{ github.token }}
       - name: Commit feed
         run: |

@@ -3,11 +3,12 @@
 
     python podcast.py <url>
 
-    python podcast.py --playlist <playlist url> [--latest 3]
+    python podcast.py --playlist <playlist url>
 
 Downloads the audio with yt-dlp, adds the episode to
 episodes.json and regenerates feed.xml. With --playlist it adds the latest
-entries that are not in episodes.json yet. Enclosure URLs point at GitHub
+entries that are not in episodes.json yet. Only the newest KEEP episodes are
+kept; the ids of the rest are reported so their audio files can be deleted. Enclosure URLs point at GitHub
 Release assets: https://github.com/<REPO>/releases/download/ep-<id>/<id>.m4a
 """
 import argparse
@@ -28,7 +29,7 @@ OUT = ROOT / "out"
 REPO = os.environ.get("PODCAST_REPO", "vahagn-grigoryan/video-2-podcast")
 TITLE = os.environ.get("PODCAST_TITLE", "Самые Честные Новости")
 SITE = os.environ.get("PODCAST_SITE", f"https://{REPO.split('/')[0]}.github.io/{REPO.split('/')[-1]}/")
-KEEP = 100
+KEEP = int(os.environ.get("PODCAST_KEEP", "2"))  # newest episodes to keep; older ones are removed
 
 
 def download(url: str) -> dict:
@@ -67,7 +68,7 @@ def new_playlist_urls(playlist: str, latest: int, known: set[str]) -> list[str]:
 
 def write_feed(episodes: list[dict]) -> None:
     items = []
-    for e in episodes[:KEEP]:
+    for e in episodes:
         pub = format_datetime(datetime.fromisoformat(e["published"]))
         items.append(f"""    <item>
       <title>{escape(e['title'])}</title>
@@ -98,7 +99,7 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("url", nargs="?")
     parser.add_argument("--playlist")
-    parser.add_argument("--latest", type=int, default=3)
+    parser.add_argument("--latest", type=int, default=KEEP)
     args = parser.parse_args()
     if not args.url and not args.playlist:
         parser.error("give a video url or --playlist")
@@ -117,13 +118,18 @@ def main() -> None:
         print("No new episodes")
 
     episodes.sort(key=lambda e: e["published"], reverse=True)
+    removed = [e["id"] for e in episodes[KEEP:]]
+    episodes = episodes[:KEEP]
+    if removed:
+        print(f"Removing old episodes: {' '.join(removed)}")
     EPISODES.write_text(json.dumps(episodes, ensure_ascii=False, indent=2) + "\n")
     write_feed(episodes)
 
-    # Lets the GitHub workflow upload each new file as a release asset.
+    # Lets the GitHub workflow upload new files and delete old ones.
     if os.environ.get("GITHUB_OUTPUT"):
         with open(os.environ["GITHUB_OUTPUT"], "a") as f:
             f.write(f"ids={' '.join(added)}\n")
+            f.write(f"removed={' '.join(removed)}\n")
 
 
 if __name__ == "__main__":
