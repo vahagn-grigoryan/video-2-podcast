@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
   <channel>
-    <title>My VK Audio</title>
+    <title>Самые Честные Новости</title>
     <link>https://vahagn-grigoryan.github.io/video-2-podcast/</link>
-    <description>My VK Audio</description>
+    <description>Самые Честные Новости</description>
     <language>ru</language>
     <itunes:explicit>false</itunes:explicit>
     <item>

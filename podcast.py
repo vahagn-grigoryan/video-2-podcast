@@ -23,7 +23,7 @@ FEED = ROOT / "feed.xml"
 OUT = ROOT / "out"
 
 REPO = os.environ.get("PODCAST_REPO", "vahagn-grigoryan/video-2-podcast")
-TITLE = os.environ.get("PODCAST_TITLE", "My VK Audio")
+TITLE = os.environ.get("PODCAST_TITLE", "Самые Честные Новости")
 SITE = os.environ.get("PODCAST_SITE", f"https://{REPO.split('/')[0]}.github.io/{REPO.split('/')[-1]}/")
 KEEP = 100
 
