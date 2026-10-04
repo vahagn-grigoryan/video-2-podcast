@@ -32,7 +32,7 @@ def download(url: str) -> dict:
     OUT.mkdir(exist_ok=True)
     cmd = [
         sys.executable, "-m", "yt_dlp", "--no-playlist",
-        "-f", "bestaudio[abr<=70]/bestaudio",  # VK offers AAC audio-only streams; ~70 kbps is plenty for speech
+        "-f", "bestaudio[ext=m4a][abr<=70]/bestaudio[ext=m4a]",  # AAC audio-only (iOS-safe); ~70 kbps is plenty for speech
         "--write-info-json", "-o", str(OUT / "%(id)s.%(ext)s"),
         "--print", "after_move:%(id)s",
         url,
