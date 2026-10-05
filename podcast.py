@@ -29,6 +29,7 @@ OUT = ROOT / "out"
 REPO = os.environ.get("PODCAST_REPO", "vahagn-grigoryan/video-2-podcast")
 TITLE = os.environ.get("PODCAST_TITLE", "Самые Честные Новости")
 SITE = os.environ.get("PODCAST_SITE", f"https://{REPO.split('/')[0]}.github.io/{REPO.split('/')[-1]}/")
+COVER = "cover-2.jpg"  # rename the file and bump this to make podcast apps re-fetch new artwork
 KEEP = int(os.environ.get("PODCAST_KEEP", "2"))  # newest episodes to keep; older ones are removed
 
 
@@ -87,7 +88,7 @@ def write_feed(episodes: list[dict]) -> None:
     <link>{escape(SITE)}</link>
     <description>{escape(TITLE)}</description>
     <language>ru</language>
-    <itunes:image href="{escape(SITE)}cover.jpg"/>
+    <itunes:image href="{escape(SITE)}{COVER}"/>
     <itunes:explicit>false</itunes:explicit>
 {chr(10).join(items)}
   </channel>

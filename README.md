@@ -11,7 +11,7 @@ In Overcast: *Add URL* and paste it.
 1. A scheduled GitHub Actions run checks the VK playlist for new videos.
 2. `yt-dlp` downloads the audio-only AAC stream (about 70 kbps, roughly 20 MB per episode).
 3. The audio goes to a GitHub Release (`ep-<video id>`). The episode list goes to `episodes.json`, and `feed.xml` is rebuilt from it.
-4. GitHub Pages serves `feed.xml` and `cover.jpg`. The podcast app downloads the audio from the Release.
+4. GitHub Pages serves `feed.xml` and the cover image. The podcast app downloads the audio from the Release.
 
 ## Schedule
 
@@ -41,7 +41,7 @@ Paste a video URL, or leave the field empty to check the playlist now.
 | --- | --- |
 | Show name | `TITLE` in `podcast.py` (or the `PODCAST_TITLE` variable) |
 | Playlist | `PLAYLIST` in `.github/workflows/add-episode.yml` |
-| Cover art | Replace `cover.jpg` with a square image, 1400×1400 or larger |
+| Cover art | Add a square image (1400×1400 or larger) under a new name, e.g. `cover-3.jpg`, and set `COVER` in `podcast.py` to it. A new name is needed because Overcast caches artwork by URL. |
 | Audio quality | The `-f` format in `download()` in `podcast.py` |
 
 Overcast caches artwork and the show name. After changing them, you may need to re-add the feed.
