@@ -31,6 +31,7 @@ TITLE = os.environ.get("PODCAST_TITLE", "Самые Честные Новост�
 SITE = os.environ.get("PODCAST_SITE", f"https://{REPO.split('/')[0]}.github.io/{REPO.split('/')[-1]}/")
 COVER = "cover-2.jpg"  # rename the file and bump this to make podcast apps re-fetch new artwork
 KEEP = int(os.environ.get("PODCAST_KEEP", "2"))  # newest episodes to keep; older ones are removed
+NOT_READY_HOURS = 3  # VK needs a while to process a new video; a failure younger than this is retried later
 
 
 def download(url: str) -> dict:
@@ -58,6 +59,16 @@ def download(url: str) -> dict:
         "url": f"https://github.com/{REPO}/releases/download/ep-{video_id}/{video_id}.m4a",
         "source": url,
     }
+
+
+def age_hours(url: str) -> float | None:
+    """Hours since the video was published, or None if VK will not tell us."""
+    cmd = [sys.executable, "-m", "yt_dlp", "--no-playlist", "--skip-download", "--print", "timestamp", url]
+    try:
+        out = subprocess.run(cmd, check=True, text=True, stdout=subprocess.PIPE).stdout.strip()
+        return (datetime.now(timezone.utc).timestamp() - float(out)) / 3600
+    except (subprocess.CalledProcessError, ValueError):
+        return None
 
 
 def new_playlist_urls(playlist: str, latest: int, known: set[str]) -> list[str]:
@@ -110,7 +121,14 @@ def main() -> None:
 
     added = []
     for url in urls:
-        episode = download(url)
+        try:
+            episode = download(url)
+        except subprocess.CalledProcessError:
+            age = age_hours(url)
+            if age is None or age >= NOT_READY_HOURS:
+                raise
+            print(f"Not ready yet ({age:.1f} h old, VK is still processing it); will retry: {url}")
+            continue
         episodes = [e for e in episodes if e["id"] != episode["id"]]
         episodes.append(episode)
         added.append(episode["id"])
