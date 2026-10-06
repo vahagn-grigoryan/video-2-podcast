@@ -6,8 +6,8 @@ on:
     # GitHub drops or delays many scheduled runs, so check every 15 minutes in these windows.
     - cron: "7,22,37,52 5-8 * * 5"
     - cron: "7,22,37,52 15-22 * * 2"
-    # Daily catch-up in case a run was late or skipped.
-    - cron: "20 12 * * *"
+    # Hourly catch-up around the clock, in case runs in the windows above were late or skipped.
+    - cron: "37 * * * *"
   workflow_dispatch:
     inputs:
       url:

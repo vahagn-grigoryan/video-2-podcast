@@ -20,10 +20,11 @@ The workflow checks at these times (UTC), set in `.github/workflows/add-episode.
 
 - Fridays every 15 minutes, 05:07 to 08:52
 - Tuesdays every 15 minutes, 15:07 to 22:52
-- Every day 12:20, as a catch-up
+- Every hour at :37, around the clock, as a catch-up
 
 GitHub drops or delays many scheduled runs, sometimes by hours, which is why the windows are checked so often.
 A run with nothing new takes about 25 seconds and costs nothing on a public repo.
+An episode that VK is still processing is skipped and retried on the next check. If it is still not ready after 3 hours, the run fails and GitHub emails you.
 
 ## Only the newest two episodes are kept
 
