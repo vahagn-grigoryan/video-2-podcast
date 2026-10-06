@@ -18,11 +18,12 @@ In Overcast: *Add URL* and paste it.
 The show publishes Fridays at about 05:45 UTC and Tuesday evenings (15:40 to 19:52 UTC).
 The workflow checks at these times (UTC), set in `.github/workflows/add-episode.yml`:
 
-- Fridays 06:20, 07:20, 08:20
-- Tuesdays hourly, 16:20 to 22:20
+- Fridays every 15 minutes, 05:07 to 08:52
+- Tuesdays every 15 minutes, 15:07 to 22:52
 - Every day 12:20, as a catch-up
 
-GitHub can start scheduled runs 10 to 60 minutes late.
+GitHub drops or delays many scheduled runs, sometimes by hours, which is why the windows are checked so often.
+A run with nothing new takes about 25 seconds and costs nothing on a public repo.
 
 ## Only the newest two episodes are kept
 

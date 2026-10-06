@@ -3,8 +3,9 @@ name: Add episode
 on:
   schedule:
     # Episodes land Fridays ~05:45 UTC and Tuesday evenings (15:40-19:52 UTC).
-    - cron: "20 6-8 * * 5"
-    - cron: "20 16-22 * * 2"
+    # GitHub drops or delays many scheduled runs, so check every 15 minutes in these windows.
+    - cron: "7,22,37,52 5-8 * * 5"
+    - cron: "7,22,37,52 15-22 * * 2"
     # Daily catch-up in case a run was late or skipped.
     - cron: "20 12 * * *"
   workflow_dispatch:
