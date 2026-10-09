@@ -22,7 +22,9 @@ The workflow checks at these times (UTC), set in `.github/workflows/add-episode.
 - Tuesdays every 15 minutes, 15:07 to 22:52
 - Every hour at :37, around the clock, as a catch-up
 
-GitHub drops or delays many scheduled runs, sometimes by hours, which is why the windows are checked so often.
+GitHub's scheduler is best effort. Measured over 59 hours (Oct 6 to 9, 2026), only 11 of 74 scheduled slots fired (15%), 4 to 7 hours apart.
+Episodes therefore show up anywhere from minutes to a few hours after VK publishes them (observed: 47 minutes and 3 h 38 min).
+A cron change does not fix this. The fix would be an outside timer (for example cron-job.org with a repo-limited access token) calling the workflow's "Run workflow" API every 10 minutes during the windows above. It is not set up.
 A run with nothing new takes about 25 seconds and costs nothing on a public repo.
 An episode that VK is still processing is skipped and retried on the next check. If it is still not ready after 3 hours, the run fails and GitHub emails you.
 
