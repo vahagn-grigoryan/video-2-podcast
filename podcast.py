@@ -47,7 +47,7 @@ SHOWS = {
         "language": "en",
         "episodes": "fireship.json",
         "feed": "fireship.xml",
-        "cover": "fireship-cover.jpg",
+        "cover": "fireship-cover-2.jpg",
         "keep": 5,
         "format": "bestaudio[ext=m4a]",
         "video_url": "https://www.youtube.com/watch?v={id}",
