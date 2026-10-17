@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
-"""Turn a video URL into a podcast episode and rebuild feed.xml.
+"""Turn a video URL into a podcast episode and rebuild the show's feed.
 
-    python podcast.py <url>
+    python podcast.py [--show vk|fireship] <url>
+    python podcast.py [--show vk|fireship] --playlist <playlist or channel url>
 
-    python podcast.py --playlist <playlist url>
-
-Downloads the audio with yt-dlp, adds the episode to
-episodes.json and regenerates feed.xml. With --playlist it adds the latest
-entries that are not in episodes.json yet. Only the newest KEEP episodes are
-kept; the ids of the rest are reported so their audio files can be deleted. Enclosure URLs point at GitHub
-Release assets: https://github.com/<REPO>/releases/download/ep-<id>/<id>.m4a
+Downloads the audio with yt-dlp, adds the episode to the show's episodes file
+and regenerates its feed. With --playlist it adds the latest entries that are
+not in the episodes file yet. Only the newest `keep` episodes are kept; the ids
+of the rest are reported so their audio files can be deleted. Enclosure URLs
+point at GitHub Release assets:
+https://github.com/<REPO>/releases/download/ep-<id>/<id>.m4a
 """
 import argparse
 import json
@@ -22,27 +22,52 @@ from pathlib import Path
 from xml.sax.saxutils import escape
 
 ROOT = Path(__file__).parent
-EPISODES = ROOT / "episodes.json"
-FEED = ROOT / "feed.xml"
 OUT = ROOT / "out"
 
 REPO = os.environ.get("PODCAST_REPO", "vahagn-grigoryan/video-2-podcast")
-TITLE = os.environ.get("PODCAST_TITLE", "Самые Честные Новости")
 SITE = os.environ.get("PODCAST_SITE", f"https://{REPO.split('/')[0]}.github.io/{REPO.split('/')[-1]}/")
-COVER = "cover-2.jpg"  # rename the file and bump this to make podcast apps re-fetch new artwork
-KEEP = int(os.environ.get("PODCAST_KEEP", "2"))  # newest episodes to keep; older ones are removed
 NOT_READY_HOURS = 3  # VK needs a while to process a new video; a failure younger than this is retried later
 
+SHOWS = {
+    "vk": {
+        "title": os.environ.get("PODCAST_TITLE", "Самые Честные Новости"),
+        "description": None,  # None: use the title
+        "language": "ru",
+        "episodes": "episodes.json",
+        "feed": "feed.xml",
+        "cover": "cover-2.jpg",  # rename the file and bump this to make podcast apps re-fetch new artwork
+        "keep": int(os.environ.get("PODCAST_KEEP", "2")),  # newest episodes to keep; older ones are removed
+        "format": "bestaudio[ext=m4a][abr<=70]/bestaudio[ext=m4a]",  # AAC audio-only (iOS-safe); ~70 kbps is plenty for speech
+        "video_url": "https://vkvideo.ru/video{id}",
+        "yt_dlp_args": [],
+    },
+    "fireship": {
+        "title": "Fireship",
+        "description": "High-intensity tech news, AI updates and coding tutorials from the Fireship YouTube channel.",
+        "language": "en",
+        "episodes": "fireship.json",
+        "feed": "fireship.xml",
+        "cover": "fireship-cover.jpg",
+        "keep": 5,
+        "format": "bestaudio[ext=m4a]",
+        "video_url": "https://www.youtube.com/watch?v={id}",
+        "yt_dlp_args": ["--js-runtimes", "node"],  # YouTube needs a JavaScript runtime
+    },
+}
 
-def download(url: str) -> dict:
+
+def yt_dlp(show: dict, *args: str) -> list[str]:
+    return [sys.executable, "-m", "yt_dlp", *show["yt_dlp_args"], *args]
+
+
+def download(show: dict, url: str) -> dict:
     OUT.mkdir(exist_ok=True)
-    cmd = [
-        sys.executable, "-m", "yt_dlp", "--no-playlist",
-        "-f", "bestaudio[ext=m4a][abr<=70]/bestaudio[ext=m4a]",  # AAC audio-only (iOS-safe); ~70 kbps is plenty for speech
+    cmd = yt_dlp(
+        show, "--no-playlist", "-f", show["format"],
         "--write-info-json", "-o", str(OUT / "%(id)s.%(ext)s"),
         "--print", "after_move:%(id)s",
         url,
-    ]
+    )
     video_id = subprocess.run(cmd, check=True, text=True, stdout=subprocess.PIPE).stdout.strip().splitlines()[-1]
     info = json.loads((OUT / f"{video_id}.info.json").read_text())
     audio = OUT / f"{video_id}.m4a"
@@ -61,9 +86,9 @@ def download(url: str) -> dict:
     }
 
 
-def age_hours(url: str) -> float | None:
-    """Hours since the video was published, or None if VK will not tell us."""
-    cmd = [sys.executable, "-m", "yt_dlp", "--no-playlist", "--skip-download", "--print", "timestamp", url]
+def age_hours(show: dict, url: str) -> float | None:
+    """Hours since the video was published, or None if the site will not tell us."""
+    cmd = yt_dlp(show, "--no-playlist", "--skip-download", "--print", "timestamp", url)
     try:
         out = subprocess.run(cmd, check=True, text=True, stdout=subprocess.PIPE).stdout.strip()
         return (datetime.now(timezone.utc).timestamp() - float(out)) / 3600
@@ -71,14 +96,14 @@ def age_hours(url: str) -> float | None:
         return None
 
 
-def new_playlist_urls(playlist: str, latest: int, known: set[str]) -> list[str]:
+def new_playlist_urls(show: dict, playlist: str, latest: int, known: set[str]) -> list[str]:
     """URLs of the newest playlist entries we do not have yet, oldest first."""
-    cmd = [sys.executable, "-m", "yt_dlp", "--flat-playlist", "--playlist-end", str(latest), "--print", "id", playlist]
+    cmd = yt_dlp(show, "--flat-playlist", "--playlist-end", str(latest), "--print", "id", playlist)
     ids = subprocess.run(cmd, check=True, text=True, stdout=subprocess.PIPE).stdout.split()
-    return [f"https://vkvideo.ru/video{i}" for i in reversed(ids) if i not in known]
+    return [show["video_url"].format(id=i) for i in reversed(ids) if i not in known]
 
 
-def write_feed(episodes: list[dict]) -> None:
+def write_feed(show: dict, episodes: list[dict]) -> None:
     items = []
     for e in episodes:
         pub = format_datetime(datetime.fromisoformat(e["published"]))
@@ -92,14 +117,16 @@ def write_feed(episodes: list[dict]) -> None:
       <itunes:duration>{e['duration']}</itunes:duration>
       <itunes:author>{escape(e['author'])}</itunes:author>
     </item>""")
-    FEED.write_text(f"""<?xml version="1.0" encoding="UTF-8"?>
+    title = show["title"]
+    description = show["description"] or title
+    (ROOT / show["feed"]).write_text(f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
   <channel>
-    <title>{escape(TITLE)}</title>
+    <title>{escape(title)}</title>
     <link>{escape(SITE)}</link>
-    <description>{escape(TITLE)}</description>
-    <language>ru</language>
-    <itunes:image href="{escape(SITE)}{COVER}"/>
+    <description>{escape(description)}</description>
+    <language>{show['language']}</language>
+    <itunes:image href="{escape(SITE)}{show['cover']}"/>
     <itunes:explicit>false</itunes:explicit>
 {chr(10).join(items)}
   </channel>
@@ -110,24 +137,31 @@ def write_feed(episodes: list[dict]) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("url", nargs="?")
+    parser.add_argument("--show", choices=SHOWS, default="vk")
     parser.add_argument("--playlist")
-    parser.add_argument("--latest", type=int, default=KEEP)
+    parser.add_argument("--latest", type=int)
     args = parser.parse_args()
     if not args.url and not args.playlist:
         parser.error("give a video url or --playlist")
+    show = SHOWS[args.show]
+    keep = show["keep"]
+    episodes_file = ROOT / show["episodes"]
 
-    episodes = json.loads(EPISODES.read_text()) if EPISODES.exists() else []
-    urls = [args.url] if args.url else new_playlist_urls(args.playlist, args.latest, {e["id"] for e in episodes})
+    episodes = json.loads(episodes_file.read_text()) if episodes_file.exists() else []
+    if args.url:
+        urls = [args.url]
+    else:
+        urls = new_playlist_urls(show, args.playlist, args.latest or keep, {e["id"] for e in episodes})
 
     added = []
     for url in urls:
         try:
-            episode = download(url)
+            episode = download(show, url)
         except subprocess.CalledProcessError:
-            age = age_hours(url)
+            age = age_hours(show, url)
             if age is None or age >= NOT_READY_HOURS:
                 raise
-            print(f"Not ready yet ({age:.1f} h old, VK is still processing it); will retry: {url}")
+            print(f"Not ready yet ({age:.1f} h old, still being processed); will retry: {url}")
             continue
         episodes = [e for e in episodes if e["id"] != episode["id"]]
         episodes.append(episode)
@@ -137,14 +171,14 @@ def main() -> None:
         print("No new episodes")
 
     episodes.sort(key=lambda e: e["published"], reverse=True)
-    removed = [e["id"] for e in episodes[KEEP:]]
-    episodes = episodes[:KEEP]
+    removed = [e["id"] for e in episodes[keep:]]
+    episodes = episodes[:keep]
     if removed:
         print(f"Removing old episodes: {' '.join(removed)}")
-    EPISODES.write_text(json.dumps(episodes, ensure_ascii=False, indent=2) + "\n")
-    write_feed(episodes)
+    episodes_file.write_text(json.dumps(episodes, ensure_ascii=False, indent=2) + "\n")
+    write_feed(show, episodes)
 
-    # Lets the GitHub workflow upload new files and delete old ones.
+    # Lets the caller (GitHub workflow or Mac job) upload new files and delete old ones.
     if os.environ.get("GITHUB_OUTPUT"):
         with open(os.environ["GITHUB_OUTPUT"], "a") as f:
             f.write(f"ids={' '.join(added)}\n")
