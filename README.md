@@ -60,4 +60,21 @@ Overcast caches artwork and the show name. After changing them, you may need to 
 
 - The repo, the feed and the audio files are public. Anyone with the URL can download them.
 - Downloads from VK are very slow from some home connections but fast from GitHub's servers. Test on GitHub, not on a laptop.
-- Only VK has been tried. YouTube may block GitHub's servers.
+
+## Fireship (YouTube), synced from the Mac
+
+**Feed URL:** `https://vahagn-grigoryan.github.io/video-2-podcast/fireship.xml` (a separate show in Overcast).
+
+YouTube blocks GitHub's servers ("Sign in to confirm you're not a bot", tested Oct 17, 2026), so this show cannot use the workflow.
+A background job on the Mac (launchd, label `com.vahagn.video2podcast.fireship`) does the same work from a separate clone at `~/.local/share/video-2-podcast`.
+It publishes to the same repo, so the feed is still served by GitHub Pages and works while the Mac is off. Only new episodes need the Mac awake.
+
+- **Schedule:** Fireship posts about 2 videos a week, Monday to Friday, between 16:00 and 21:00 UTC (measured over 40 videos). Inside Mon-Fri 15:45-21:15 UTC the job checks every 10 minutes; outside it at most every 2 hours. A Mac that slept catches up when it wakes.
+- **Keeps** the newest 5 episodes (about 5 MB each).
+- **Set up or repair:** `bash mac/install.sh`. It is safe to run again.
+- **Log:** `~/Library/Logs/video-2-podcast-fireship.log`. A failed run shows a macOS notification. No email is sent.
+- **Stop it:** `launchctl bootout gui/$(id -u)/com.vahagn.video2podcast.fireship`
+- **Run by hand:** `bash ~/.local/share/video-2-podcast/mac/sync-fireship.sh`
+- **Add another channel:** add an entry to `SHOWS` in `podcast.py` and a copy of `mac/sync-fireship.sh` with the channel URL.
+
+Only VK and YouTube (Fireship) have been tried.
