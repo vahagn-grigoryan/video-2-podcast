@@ -1,5 +1,17 @@
 [
   {
+    "id": "b2tjnxX8IHU",
+    "title": "Did Google just dethrone OpenAI and Anthropic?",
+    "description": "Macroscope can auto-approve your team's PRs safely. Try it here: https://macroscope.com/?utm_source=fireship\n\nGoogle’s new model claims to beat GPT-6 and Opus 5.5, so I took them all for a test drive. Let's dive in.\n\nWant more Fireship?\n\n🗞️ Newsletter: https://bytes.dev\n🧠 Courses: https://fireship.dev",
+    "author": "Fireship",
+    "image": "https://i.ytimg.com/vi_webp/b2tjnxX8IHU/maxresdefault.webp",
+    "duration": 393,
+    "published": "2026-10-20T16:21:03+00:00",
+    "size": 6355437,
+    "url": "https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-b2tjnxX8IHU/b2tjnxX8IHU.m4a",
+    "source": "https://www.youtube.com/watch?v=b2tjnxX8IHU"
+  },
+  {
     "id": "l3L_lETiSzc",
     "title": "The runtime wars are over... and Node won",
     "description": "Every JetBrains account now comes with a free coding model called Junie Lite. Try it: https://jb.gg/JunieLite\n\nCloudflare just acquired Deno and the creator of Node.js is finally admitting that reimplementing it was a mistake. Let's dive in.\n\nWant more Fireship?\n\n🗞️ Newsletter: https://bytes.dev\n🧠 Courses: https://fireship.dev",
@@ -46,17 +58,5 @@
     "size": 5978116,
     "url": "https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-WrCjAAl9okA/WrCjAAl9okA.m4a",
     "source": "https://www.youtube.com/watch?v=WrCjAAl9okA"
-  },
-  {
-    "id": "_5p1_TNSWqQ",
-    "title": "PewDiePie is setting AI free... and OpenAI is furious",
-    "description": "Namespace is actually the fastest way to run your GitHub Actions (and more). Try it for free - https://namespace.so/github-actions\n\nPewDiePie is building Ajax, an uncensored AI model he trained at home after OpenAI banned him twice for distillation. Let's dive in.\n\nWant more Fireship?\n\n🗞️ Newsletter: https://bytes.dev\n🧠 Courses: https://fireship.dev",
-    "author": "Fireship",
-    "image": "https://i.ytimg.com/vi_webp/_5p1_TNSWqQ/maxresdefault.webp",
-    "duration": 345,
-    "published": "2026-10-05T20:34:44+00:00",
-    "size": 5581686,
-    "url": "https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-_5p1_TNSWqQ/_5p1_TNSWqQ.m4a",
-    "source": "https://www.youtube.com/watch?v=_5p1_TNSWqQ"
   }
 ]

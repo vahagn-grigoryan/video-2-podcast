@@ -8,6 +8,23 @@
     <itunes:image href="https://vahagn-grigoryan.github.io/video-2-podcast/fireship-cover-2.jpg"/>
     <itunes:explicit>false</itunes:explicit>
     <item>
+      <title>Did Google just dethrone OpenAI and Anthropic?</title>
+      <description>Macroscope can auto-approve your team's PRs safely. Try it here: https://macroscope.com/?utm_source=fireship
+
+Google’s new model claims to beat GPT-6 and Opus 5.5, so I took them all for a test drive. Let's dive in.
+
+Want more Fireship?
+
+🗞️ Newsletter: https://bytes.dev
+🧠 Courses: https://fireship.dev</description>
+      <pubDate>Tue, 20 Oct 2026 16:21:03 +0000</pubDate>
+      <guid isPermaLink="false">b2tjnxX8IHU</guid>
+      <link>https://www.youtube.com/watch?v=b2tjnxX8IHU</link>
+      <enclosure url="https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-b2tjnxX8IHU/b2tjnxX8IHU.m4a" length="6355437" type="audio/x-m4a"/>
+      <itunes:duration>393</itunes:duration>
+      <itunes:author>Fireship</itunes:author>
+    </item>
+    <item>
       <title>The runtime wars are over... and Node won</title>
       <description>Every JetBrains account now comes with a free coding model called Junie Lite. Try it: https://jb.gg/JunieLite
 
@@ -73,23 +90,6 @@ Want more Fireship?
       <link>https://www.youtube.com/watch?v=WrCjAAl9okA</link>
       <enclosure url="https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-WrCjAAl9okA/WrCjAAl9okA.m4a" length="5978116" type="audio/x-m4a"/>
       <itunes:duration>370</itunes:duration>
-      <itunes:author>Fireship</itunes:author>
-    </item>
-    <item>
-      <title>PewDiePie is setting AI free... and OpenAI is furious</title>
-      <description>Namespace is actually the fastest way to run your GitHub Actions (and more). Try it for free - https://namespace.so/github-actions
-
-PewDiePie is building Ajax, an uncensored AI model he trained at home after OpenAI banned him twice for distillation. Let's dive in.
-
-Want more Fireship?
-
-🗞️ Newsletter: https://bytes.dev
-🧠 Courses: https://fireship.dev</description>
-      <pubDate>Mon, 05 Oct 2026 20:34:44 +0000</pubDate>
-      <guid isPermaLink="false">_5p1_TNSWqQ</guid>
-      <link>https://www.youtube.com/watch?v=_5p1_TNSWqQ</link>
-      <enclosure url="https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-_5p1_TNSWqQ/_5p1_TNSWqQ.m4a" length="5581686" type="audio/x-m4a"/>
-      <itunes:duration>345</itunes:duration>
       <itunes:author>Fireship</itunes:author>
     </item>
   </channel>
