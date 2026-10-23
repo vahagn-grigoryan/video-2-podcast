@@ -1,5 +1,17 @@
 [
   {
+    "id": "SMGg7iisHmc",
+    "title": "Every PHP server from the last decade just got owned...",
+    "description": "Semgrep Guardian catches the risky code and packages your agent introduces. Try it free for 60 days: https://semgrep.dev/onboarding/guardian?offer=fireship_202610&utm_source=fireship&utm_medium=referral&utm_campaign=2026-10_fireship_guardian_campaign\n\nPHP2Shell, a backdoored Python package with 23 million weekly downloads, a GitLab bug dating back to 2014, rogue AI agents inside bank accounts, and a certificate authority generating HTTPS keys from numbers under 256 — let's break down the craziest week in the history of the internet.\n\nWant more Fireship?\n\n🗞️ Newsletter: https://bytes.dev\n🧠 Courses: https://fireship.dev",
+    "author": "Fireship",
+    "image": "https://i.ytimg.com/vi_webp/SMGg7iisHmc/maxresdefault.webp",
+    "duration": 363,
+    "published": "2026-10-23T18:19:58+00:00",
+    "size": 5877009,
+    "url": "https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-SMGg7iisHmc/SMGg7iisHmc.m4a",
+    "source": "https://www.youtube.com/watch?v=SMGg7iisHmc"
+  },
+  {
     "id": "zv6B6PQOuHE",
     "title": "The last real programmers are dying out...",
     "description": "Get real-time search data from a single API. Fireship viewers get 1,000 free searches: https://serpapi.com/fireship\n\nYes the very foundations of the internet are currently crumbling to pieces, but before we look at that, let's distract ourselves with the 7 common programmer stereotypes that still exist.\n\nWant more Fireship?\n\n🗞️ Newsletter: https://bytes.dev\n🧠 Courses: https://fireship.dev",
@@ -46,17 +58,5 @@
     "size": 4943522,
     "url": "https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-QZVzuq28eFw/QZVzuq28eFw.m4a",
     "source": "https://www.youtube.com/watch?v=QZVzuq28eFw"
-  },
-  {
-    "id": "wajoP_5Cpw8",
-    "title": "Every app on Earth is now open source... whether it likes it or not",
-    "description": "Every agent needs proper tools. Apify MCP gives yours thousands of them, ready to run. Use code FIRESHIP25 for $25 in free credits: https://apify.it/4ygURHS\n\nA developer just rewrote seven Adobe apps in Rust and open-sourced them for free. Let's test them out.\n\nWant more Fireship?\n\n🗞️ Newsletter: https://bytes.dev\n🧠 Courses: https://fireship.dev",
-    "author": "Fireship",
-    "image": "https://i.ytimg.com/vi/wajoP_5Cpw8/maxresdefault.jpg",
-    "duration": 355,
-    "published": "2026-10-12T19:15:23+00:00",
-    "size": 5746039,
-    "url": "https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-wajoP_5Cpw8/wajoP_5Cpw8.m4a",
-    "source": "https://www.youtube.com/watch?v=wajoP_5Cpw8"
   }
 ]
