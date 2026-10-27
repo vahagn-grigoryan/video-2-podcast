@@ -1,5 +1,17 @@
 [
   {
+    "id": "G_em1hHPnXY",
+    "title": "China just dropped a new frontier model... and nobody can explain how",
+    "description": "Get 20% off Mobbin Pro to help your agent design UIs that actually convert - https://mobbin.com/fireship\n\nKimi K3.1 just dropped as a free 3-trillion-parameter open-weight model that comes within one point of Opus on Terminal Bench. But is it *actually* good? Let's find out.\n\nWant more Fireship?\n\n🗞️ Newsletter: https://bytes.dev\n🧠 Courses: https://fireship.dev",
+    "author": "Fireship",
+    "image": "https://i.ytimg.com/vi_webp/G_em1hHPnXY/maxresdefault.webp",
+    "duration": 385,
+    "published": "2026-10-26T18:55:29+00:00",
+    "size": 6231878,
+    "url": "https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-G_em1hHPnXY/G_em1hHPnXY.m4a",
+    "source": "https://www.youtube.com/watch?v=G_em1hHPnXY"
+  },
+  {
     "id": "SMGg7iisHmc",
     "title": "Every PHP server from the last decade just got owned...",
     "description": "Semgrep Guardian catches the risky code and packages your agent introduces. Try it free for 60 days: https://semgrep.dev/onboarding/guardian?offer=fireship_202610&utm_source=fireship&utm_medium=referral&utm_campaign=2026-10_fireship_guardian_campaign\n\nPHP2Shell, a backdoored Python package with 23 million weekly downloads, a GitLab bug dating back to 2014, rogue AI agents inside bank accounts, and a certificate authority generating HTTPS keys from numbers under 256 — let's break down the craziest week in the history of the internet.\n\nWant more Fireship?\n\n🗞️ Newsletter: https://bytes.dev\n🧠 Courses: https://fireship.dev",
@@ -46,17 +58,5 @@
     "size": 5497749,
     "url": "https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-l3L_lETiSzc/l3L_lETiSzc.m4a",
     "source": "https://www.youtube.com/watch?v=l3L_lETiSzc"
-  },
-  {
-    "id": "QZVzuq28eFw",
-    "title": "OpenAI’s lead engineer was secretly a spy...",
-    "description": "Run GitHub Actions 2x faster and build with Codesmith at https://www.blacksmith.sh/\n\nAn OpenAI engineer built a wiretap with his wife’s ChatGPT account, hid it in toilet paper behind the executive boardroom TV, and lasted 48 hours before getting caught. Let's dive in.\n\nWant more Fireship?\n\n🗞️ Newsletter: https://bytes.dev\n🧠 Courses: https://fireship.dev",
-    "author": "Fireship",
-    "image": "https://i.ytimg.com/vi_webp/QZVzuq28eFw/maxresdefault.webp",
-    "duration": 306,
-    "published": "2026-10-14T17:48:10+00:00",
-    "size": 4943522,
-    "url": "https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-QZVzuq28eFw/QZVzuq28eFw.m4a",
-    "source": "https://www.youtube.com/watch?v=QZVzuq28eFw"
   }
 ]
