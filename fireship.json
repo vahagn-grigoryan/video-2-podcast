@@ -1,5 +1,17 @@
 [
   {
+    "id": "nEaJMdM1djM",
+    "title": "Did the AI bubble just pop?",
+    "description": "Try Hyperagent for free, or sign in with ChatGPT to get more usage from your existing plan: https://www.hyperagent.com/login?utm_source=youtube&utm_medium=influencer&utm_campaign=FIRESHIP\n\nAre we cooked chat?\n\nWant more Fireship?\n\n🗞️ Newsletter: https://bytes.dev\n🧠 Courses: https://fireship.dev",
+    "author": "Fireship",
+    "image": "https://i.ytimg.com/vi_webp/nEaJMdM1djM/maxresdefault.webp",
+    "duration": 325,
+    "published": "2026-10-28T13:31:29+00:00",
+    "size": 5252907,
+    "url": "https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-nEaJMdM1djM/nEaJMdM1djM.m4a",
+    "source": "https://www.youtube.com/watch?v=nEaJMdM1djM"
+  },
+  {
     "id": "G_em1hHPnXY",
     "title": "China just dropped a new frontier model... and nobody can explain how",
     "description": "Get 20% off Mobbin Pro to help your agent design UIs that actually convert - https://mobbin.com/fireship\n\nKimi K3.1 just dropped as a free 3-trillion-parameter open-weight model that comes within one point of Opus on Terminal Bench. But is it *actually* good? Let's find out.\n\nWant more Fireship?\n\n🗞️ Newsletter: https://bytes.dev\n🧠 Courses: https://fireship.dev",
@@ -46,17 +58,5 @@
     "size": 6355437,
     "url": "https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-b2tjnxX8IHU/b2tjnxX8IHU.m4a",
     "source": "https://www.youtube.com/watch?v=b2tjnxX8IHU"
-  },
-  {
-    "id": "l3L_lETiSzc",
-    "title": "The runtime wars are over... and Node won",
-    "description": "Every JetBrains account now comes with a free coding model called Junie Lite. Try it: https://jb.gg/JunieLite\n\nCloudflare just acquired Deno and the creator of Node.js is finally admitting that reimplementing it was a mistake. Let's dive in.\n\nWant more Fireship?\n\n🗞️ Newsletter: https://bytes.dev\n🧠 Courses: https://fireship.dev",
-    "author": "Fireship",
-    "image": "https://i.ytimg.com/vi_webp/l3L_lETiSzc/maxresdefault.webp",
-    "duration": 340,
-    "published": "2026-10-15T17:35:15+00:00",
-    "size": 5497749,
-    "url": "https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-l3L_lETiSzc/l3L_lETiSzc.m4a",
-    "source": "https://www.youtube.com/watch?v=l3L_lETiSzc"
   }
 ]

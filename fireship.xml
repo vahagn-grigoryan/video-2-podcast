@@ -8,6 +8,23 @@
     <itunes:image href="https://vahagn-grigoryan.github.io/video-2-podcast/fireship-cover-2.jpg"/>
     <itunes:explicit>false</itunes:explicit>
     <item>
+      <title>Did the AI bubble just pop?</title>
+      <description>Try Hyperagent for free, or sign in with ChatGPT to get more usage from your existing plan: https://www.hyperagent.com/login?utm_source=youtube&amp;utm_medium=influencer&amp;utm_campaign=FIRESHIP
+
+Are we cooked chat?
+
+Want more Fireship?
+
+🗞️ Newsletter: https://bytes.dev
+🧠 Courses: https://fireship.dev</description>
+      <pubDate>Wed, 28 Oct 2026 13:31:29 +0000</pubDate>
+      <guid isPermaLink="false">nEaJMdM1djM</guid>
+      <link>https://www.youtube.com/watch?v=nEaJMdM1djM</link>
+      <enclosure url="https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-nEaJMdM1djM/nEaJMdM1djM.m4a" length="5252907" type="audio/x-m4a"/>
+      <itunes:duration>325</itunes:duration>
+      <itunes:author>Fireship</itunes:author>
+    </item>
+    <item>
       <title>China just dropped a new frontier model... and nobody can explain how</title>
       <description>Get 20% off Mobbin Pro to help your agent design UIs that actually convert - https://mobbin.com/fireship
 
@@ -73,23 +90,6 @@ Want more Fireship?
       <link>https://www.youtube.com/watch?v=b2tjnxX8IHU</link>
       <enclosure url="https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-b2tjnxX8IHU/b2tjnxX8IHU.m4a" length="6355437" type="audio/x-m4a"/>
       <itunes:duration>393</itunes:duration>
-      <itunes:author>Fireship</itunes:author>
-    </item>
-    <item>
-      <title>The runtime wars are over... and Node won</title>
-      <description>Every JetBrains account now comes with a free coding model called Junie Lite. Try it: https://jb.gg/JunieLite
-
-Cloudflare just acquired Deno and the creator of Node.js is finally admitting that reimplementing it was a mistake. Let's dive in.
-
-Want more Fireship?
-
-🗞️ Newsletter: https://bytes.dev
-🧠 Courses: https://fireship.dev</description>
-      <pubDate>Thu, 15 Oct 2026 17:35:15 +0000</pubDate>
-      <guid isPermaLink="false">l3L_lETiSzc</guid>
-      <link>https://www.youtube.com/watch?v=l3L_lETiSzc</link>
-      <enclosure url="https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-l3L_lETiSzc/l3L_lETiSzc.m4a" length="5497749" type="audio/x-m4a"/>
-      <itunes:duration>340</itunes:duration>
       <itunes:author>Fireship</itunes:author>
     </item>
   </channel>
