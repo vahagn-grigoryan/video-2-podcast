@@ -8,6 +8,23 @@
     <itunes:image href="https://vahagn-grigoryan.github.io/video-2-podcast/fireship-cover-2.jpg"/>
     <itunes:explicit>false</itunes:explicit>
     <item>
+      <title>North Korea stole $6.3 billion... and that’s not even the worst part</title>
+      <description>Start a free 14-day CodeRabbit Secure trial, no credit card required: https://coderabbit.link/fireship-011
+
+Cursor shipped a backdoor, Polymarket got drained, North Korea pulled off the largest theft in human history, and Anthropic showed an unreleased Claude model can get root on any unpatched Linux server. Let's break it all down.
+
+Want more Fireship?
+
+🗞️ Newsletter: https://bytes.dev
+🧠 Courses: https://fireship.dev</description>
+      <pubDate>Tue, 03 Nov 2026 19:47:10 +0000</pubDate>
+      <guid isPermaLink="false">k2ruCf_z75I</guid>
+      <link>https://www.youtube.com/watch?v=k2ruCf_z75I</link>
+      <enclosure url="https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-k2ruCf_z75I/k2ruCf_z75I.m4a" length="5362164" type="audio/x-m4a"/>
+      <itunes:duration>331</itunes:duration>
+      <itunes:author>Fireship</itunes:author>
+    </item>
+    <item>
       <title>Did the AI bubble just pop?</title>
       <description>Try Hyperagent for free, or sign in with ChatGPT to get more usage from your existing plan: https://www.hyperagent.com/login?utm_source=youtube&amp;utm_medium=influencer&amp;utm_campaign=FIRESHIP
 
@@ -73,23 +90,6 @@ Want more Fireship?
       <link>https://www.youtube.com/watch?v=zv6B6PQOuHE</link>
       <enclosure url="https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-zv6B6PQOuHE/zv6B6PQOuHE.m4a" length="5745980" type="audio/x-m4a"/>
       <itunes:duration>355</itunes:duration>
-      <itunes:author>Fireship</itunes:author>
-    </item>
-    <item>
-      <title>Did Google just dethrone OpenAI and Anthropic?</title>
-      <description>Macroscope can auto-approve your team's PRs safely. Try it here: https://macroscope.com/?utm_source=fireship
-
-Google’s new model claims to beat GPT-6 and Opus 5.5, so I took them all for a test drive. Let's dive in.
-
-Want more Fireship?
-
-🗞️ Newsletter: https://bytes.dev
-🧠 Courses: https://fireship.dev</description>
-      <pubDate>Tue, 20 Oct 2026 16:21:03 +0000</pubDate>
-      <guid isPermaLink="false">b2tjnxX8IHU</guid>
-      <link>https://www.youtube.com/watch?v=b2tjnxX8IHU</link>
-      <enclosure url="https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-b2tjnxX8IHU/b2tjnxX8IHU.m4a" length="6355437" type="audio/x-m4a"/>
-      <itunes:duration>393</itunes:duration>
       <itunes:author>Fireship</itunes:author>
     </item>
   </channel>
