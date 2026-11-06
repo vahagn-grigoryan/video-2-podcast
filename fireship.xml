@@ -8,6 +8,23 @@
     <itunes:image href="https://vahagn-grigoryan.github.io/video-2-podcast/fireship-cover-2.jpg"/>
     <itunes:explicit>false</itunes:explicit>
     <item>
+      <title>OpenAI’s nameless model just changed the odds of P = NP...</title>
+      <description>Warp Factories is open infrastructure to build self-improving software factories. Get early access: https://warp.dev/fireship
+
+An unnamed OpenAI model just wrote an algorithm that solves 3-SAT faster than exponential time, breaking a 27-year-old hypothesis that over 800 published papers depend on. Let's break it down.
+
+Want more Fireship?
+
+🗞️ Newsletter: https://bytes.dev
+🧠 Courses: https://fireship.dev</description>
+      <pubDate>Fri, 06 Nov 2026 16:42:38 +0000</pubDate>
+      <guid isPermaLink="false">iw9SZgyahqg</guid>
+      <link>https://www.youtube.com/watch?v=iw9SZgyahqg</link>
+      <enclosure url="https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-iw9SZgyahqg/iw9SZgyahqg.m4a" length="5828336" type="audio/x-m4a"/>
+      <itunes:duration>360</itunes:duration>
+      <itunes:author>Fireship</itunes:author>
+    </item>
+    <item>
       <title>North Korea stole $6.3 billion... and that’s not even the worst part</title>
       <description>Start a free 14-day CodeRabbit Secure trial, no credit card required: https://coderabbit.link/fireship-011
 
@@ -73,23 +90,6 @@ Want more Fireship?
       <link>https://www.youtube.com/watch?v=SMGg7iisHmc</link>
       <enclosure url="https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-SMGg7iisHmc/SMGg7iisHmc.m4a" length="5877009" type="audio/x-m4a"/>
       <itunes:duration>363</itunes:duration>
-      <itunes:author>Fireship</itunes:author>
-    </item>
-    <item>
-      <title>The last real programmers are dying out...</title>
-      <description>Get real-time search data from a single API. Fireship viewers get 1,000 free searches: https://serpapi.com/fireship
-
-Yes the very foundations of the internet are currently crumbling to pieces, but before we look at that, let's distract ourselves with the 7 common programmer stereotypes that still exist.
-
-Want more Fireship?
-
-🗞️ Newsletter: https://bytes.dev
-🧠 Courses: https://fireship.dev</description>
-      <pubDate>Thu, 22 Oct 2026 15:09:31 +0000</pubDate>
-      <guid isPermaLink="false">zv6B6PQOuHE</guid>
-      <link>https://www.youtube.com/watch?v=zv6B6PQOuHE</link>
-      <enclosure url="https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-zv6B6PQOuHE/zv6B6PQOuHE.m4a" length="5745980" type="audio/x-m4a"/>
-      <itunes:duration>355</itunes:duration>
       <itunes:author>Fireship</itunes:author>
     </item>
   </channel>
