@@ -8,6 +8,23 @@
     <itunes:image href="https://vahagn-grigoryan.github.io/video-2-podcast/fireship-cover-2.jpg"/>
     <itunes:explicit>false</itunes:explicit>
     <item>
+      <title>OpenAI just found 948 ways to root your Linux box...</title>
+      <description>Greptile is the only AI code reviewer that actually runs your code. Try it for free: https://greptile.com/go/fireship
+
+A model you're not allowed to use just tore through the Linux kernel and came back with 948 root exploits... let's break it down.
+
+Want more Fireship?
+
+🗞️ Newsletter: https://bytes.dev
+🧠 Courses: https://fireship.dev</description>
+      <pubDate>Mon, 09 Nov 2026 21:04:16 +0000</pubDate>
+      <guid isPermaLink="false">pf5tXJZM1Rw</guid>
+      <link>https://www.youtube.com/watch?v=pf5tXJZM1Rw</link>
+      <enclosure url="https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-pf5tXJZM1Rw/pf5tXJZM1Rw.m4a" length="6304753" type="audio/x-m4a"/>
+      <itunes:duration>390</itunes:duration>
+      <itunes:author>Fireship</itunes:author>
+    </item>
+    <item>
       <title>OpenAI’s nameless model just changed the odds of P = NP...</title>
       <description>Warp Factories is open infrastructure to build self-improving software factories. Get early access: https://warp.dev/fireship
 
@@ -73,23 +90,6 @@ Want more Fireship?
       <link>https://www.youtube.com/watch?v=G_em1hHPnXY</link>
       <enclosure url="https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-G_em1hHPnXY/G_em1hHPnXY.m4a" length="6231878" type="audio/x-m4a"/>
       <itunes:duration>385</itunes:duration>
-      <itunes:author>Fireship</itunes:author>
-    </item>
-    <item>
-      <title>Every PHP server from the last decade just got owned...</title>
-      <description>Semgrep Guardian catches the risky code and packages your agent introduces. Try it free for 60 days: https://semgrep.dev/onboarding/guardian?offer=fireship_202610&amp;utm_source=fireship&amp;utm_medium=referral&amp;utm_campaign=2026-10_fireship_guardian_campaign
-
-PHP2Shell, a backdoored Python package with 23 million weekly downloads, a GitLab bug dating back to 2014, rogue AI agents inside bank accounts, and a certificate authority generating HTTPS keys from numbers under 256 — let's break down the craziest week in the history of the internet.
-
-Want more Fireship?
-
-🗞️ Newsletter: https://bytes.dev
-🧠 Courses: https://fireship.dev</description>
-      <pubDate>Fri, 23 Oct 2026 18:19:58 +0000</pubDate>
-      <guid isPermaLink="false">SMGg7iisHmc</guid>
-      <link>https://www.youtube.com/watch?v=SMGg7iisHmc</link>
-      <enclosure url="https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-SMGg7iisHmc/SMGg7iisHmc.m4a" length="5877009" type="audio/x-m4a"/>
-      <itunes:duration>363</itunes:duration>
       <itunes:author>Fireship</itunes:author>
     </item>
   </channel>
