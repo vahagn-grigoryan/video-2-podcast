@@ -8,6 +8,23 @@
     <itunes:image href="https://vahagn-grigoryan.github.io/video-2-podcast/fireship-cover-2.jpg"/>
     <itunes:explicit>false</itunes:explicit>
     <item>
+      <title>Jensen Huang just pulled out of Nvidia...</title>
+      <description>Manufact is the easiest way to build and deploy your MCP. Get $100 in free credits: https://manufact.com/fireship
+
+Jensen Huang just resigned as Nvidia’s CEO four days after admitting to an affair with a suspected Chinese spy whose tiny Singapore company bought $4.8 billion of Nvidia GPUs. Let's dive in.
+
+Want more Fireship?
+
+🗞️ Newsletter: https://bytes.dev
+🧠 Courses: https://fireship.dev</description>
+      <pubDate>Thu, 12 Nov 2026 21:17:10 +0000</pubDate>
+      <guid isPermaLink="false">SOwUWPtXQ9I</guid>
+      <link>https://www.youtube.com/watch?v=SOwUWPtXQ9I</link>
+      <enclosure url="https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-SOwUWPtXQ9I/SOwUWPtXQ9I.m4a" length="5422294" type="audio/x-m4a"/>
+      <itunes:duration>335</itunes:duration>
+      <itunes:author>Fireship</itunes:author>
+    </item>
+    <item>
       <title>Did Anthropic just save its $1 trillion IPO?</title>
       <description>Mux is the video API that translates audio and answers questions about your video. Get $50 in free credits: https://mux.com/fireship
 
@@ -73,23 +90,6 @@ Want more Fireship?
       <link>https://www.youtube.com/watch?v=k2ruCf_z75I</link>
       <enclosure url="https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-k2ruCf_z75I/k2ruCf_z75I.m4a" length="5362164" type="audio/x-m4a"/>
       <itunes:duration>331</itunes:duration>
-      <itunes:author>Fireship</itunes:author>
-    </item>
-    <item>
-      <title>Did the AI bubble just pop?</title>
-      <description>Try Hyperagent for free, or sign in with ChatGPT to get more usage from your existing plan: https://www.hyperagent.com/login?utm_source=youtube&amp;utm_medium=influencer&amp;utm_campaign=FIRESHIP
-
-Are we cooked chat?
-
-Want more Fireship?
-
-🗞️ Newsletter: https://bytes.dev
-🧠 Courses: https://fireship.dev</description>
-      <pubDate>Wed, 28 Oct 2026 13:31:29 +0000</pubDate>
-      <guid isPermaLink="false">nEaJMdM1djM</guid>
-      <link>https://www.youtube.com/watch?v=nEaJMdM1djM</link>
-      <enclosure url="https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-nEaJMdM1djM/nEaJMdM1djM.m4a" length="5252907" type="audio/x-m4a"/>
-      <itunes:duration>325</itunes:duration>
       <itunes:author>Fireship</itunes:author>
     </item>
   </channel>
