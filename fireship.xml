@@ -8,6 +8,23 @@
     <itunes:image href="https://vahagn-grigoryan.github.io/video-2-podcast/fireship-cover-2.jpg"/>
     <itunes:explicit>false</itunes:explicit>
     <item>
+      <title>The only software that didn’t break this week...</title>
+      <description>Use all your coding agents side by side in one IDE with JetBrains Air: https://jb.gg/https://jb.gg/JetBrainsAir-in-IDEs
+
+Solid 2.0 is the framework's first major release in over five years. Why should you care? Let's dive in.
+
+Want more Fireship?
+
+🗞️ Newsletter: https://bytes.dev
+🧠 Courses: https://fireship.dev</description>
+      <pubDate>Thu, 19 Nov 2026 17:40:33 +0000</pubDate>
+      <guid isPermaLink="false">Qxor6jpfSiU</guid>
+      <link>https://www.youtube.com/watch?v=Qxor6jpfSiU</link>
+      <enclosure url="https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-Qxor6jpfSiU/Qxor6jpfSiU.m4a" length="5392639" type="audio/x-m4a"/>
+      <itunes:duration>333</itunes:duration>
+      <itunes:author>Fireship</itunes:author>
+    </item>
+    <item>
       <title>The $7 billion bug hiding inside Microsoft’s network...</title>
       <description>OpenRouter gives you one API for every AI model that routes and governs every request, so your AI is better, faster, and cheaper. Try it free: https://openrouter.ai/?utm_source=fireship&amp;utm_medium=video&amp;utm_campaign=2026-11_dev-sponsorships&amp;utm_content=description
 
@@ -73,23 +90,6 @@ Want more Fireship?
       <link>https://www.youtube.com/watch?v=pf5tXJZM1Rw</link>
       <enclosure url="https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-pf5tXJZM1Rw/pf5tXJZM1Rw.m4a" length="6304753" type="audio/x-m4a"/>
       <itunes:duration>390</itunes:duration>
-      <itunes:author>Fireship</itunes:author>
-    </item>
-    <item>
-      <title>OpenAI’s nameless model just changed the odds of P = NP...</title>
-      <description>Warp Factories is open infrastructure to build self-improving software factories. Get early access: https://warp.dev/fireship
-
-An unnamed OpenAI model just wrote an algorithm that solves 3-SAT faster than exponential time, breaking a 27-year-old hypothesis that over 800 published papers depend on. Let's break it down.
-
-Want more Fireship?
-
-🗞️ Newsletter: https://bytes.dev
-🧠 Courses: https://fireship.dev</description>
-      <pubDate>Fri, 06 Nov 2026 16:42:38 +0000</pubDate>
-      <guid isPermaLink="false">iw9SZgyahqg</guid>
-      <link>https://www.youtube.com/watch?v=iw9SZgyahqg</link>
-      <enclosure url="https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-iw9SZgyahqg/iw9SZgyahqg.m4a" length="5828336" type="audio/x-m4a"/>
-      <itunes:duration>360</itunes:duration>
       <itunes:author>Fireship</itunes:author>
     </item>
   </channel>

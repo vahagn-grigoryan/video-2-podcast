@@ -1,5 +1,17 @@
 [
   {
+    "id": "Qxor6jpfSiU",
+    "title": "The only software that didn’t break this week...",
+    "description": "Use all your coding agents side by side in one IDE with JetBrains Air: https://jb.gg/https://jb.gg/JetBrainsAir-in-IDEs\n\nSolid 2.0 is the framework's first major release in over five years. Why should you care? Let's dive in.\n\nWant more Fireship?\n\n🗞️ Newsletter: https://bytes.dev\n🧠 Courses: https://fireship.dev",
+    "author": "Fireship",
+    "image": "https://i.ytimg.com/vi_webp/Qxor6jpfSiU/maxresdefault.webp",
+    "duration": 333,
+    "published": "2026-11-19T17:40:33+00:00",
+    "size": 5392639,
+    "url": "https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-Qxor6jpfSiU/Qxor6jpfSiU.m4a",
+    "source": "https://www.youtube.com/watch?v=Qxor6jpfSiU"
+  },
+  {
     "id": "ytmawkPTP24",
     "title": "The $7 billion bug hiding inside Microsoft’s network...",
     "description": "OpenRouter gives you one API for every AI model that routes and governs every request, so your AI is better, faster, and cheaper. Try it free: https://openrouter.ai/?utm_source=fireship&utm_medium=video&utm_campaign=2026-11_dev-sponsorships&utm_content=description\n\nMicrosoft took down Exchange Online for roughly 36 hours with a routine network capacity upgrade, so let’s break down what actually failed, why turning it off and on again didn’t work, and whether it had anything to do with the FAA grounding every flight in America.\n\nWant more Fireship?\n\n🗞️ Newsletter: https://bytes.dev\n🧠 Courses: https://fireship.dev",
@@ -46,17 +58,5 @@
     "size": 6304753,
     "url": "https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-pf5tXJZM1Rw/pf5tXJZM1Rw.m4a",
     "source": "https://www.youtube.com/watch?v=pf5tXJZM1Rw"
-  },
-  {
-    "id": "iw9SZgyahqg",
-    "title": "OpenAI’s nameless model just changed the odds of P = NP...",
-    "description": "Warp Factories is open infrastructure to build self-improving software factories. Get early access: https://warp.dev/fireship\n\nAn unnamed OpenAI model just wrote an algorithm that solves 3-SAT faster than exponential time, breaking a 27-year-old hypothesis that over 800 published papers depend on. Let's break it down.\n\nWant more Fireship?\n\n🗞️ Newsletter: https://bytes.dev\n🧠 Courses: https://fireship.dev",
-    "author": "Fireship",
-    "image": "https://i.ytimg.com/vi_webp/iw9SZgyahqg/maxresdefault.webp",
-    "duration": 360,
-    "published": "2026-11-06T16:42:38+00:00",
-    "size": 5828336,
-    "url": "https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-iw9SZgyahqg/iw9SZgyahqg.m4a",
-    "source": "https://www.youtube.com/watch?v=iw9SZgyahqg"
   }
 ]
