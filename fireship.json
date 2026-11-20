@@ -1,5 +1,17 @@
 [
   {
+    "id": "rMaMe32qQkA",
+    "title": "If you’ve deployed anything since 2015, I have bad news...",
+    "description": "Paper gives your coding agent a design canvas built on real HTML and CSS. Try it: https://paper.design/?utm_source=youtube&utm_medium=sponsor&utm_campaign=fireship&utm_content=fireship-1\n\nHackers hijacked 178 major websites through Optimizely, a single Base64 string took over Java servers, and a 10-year-old Nginx bug put 225 million websites at risk, all in three days. Let's dive in.\n\nWant more Fireship?\n\n🗞️ Newsletter: https://bytes.dev\n🧠 Courses: https://fireship.dev",
+    "author": "Fireship",
+    "image": "https://i.ytimg.com/vi_webp/rMaMe32qQkA/maxresdefault.webp",
+    "duration": 334,
+    "published": "2026-11-20T19:49:02+00:00",
+    "size": 5407702,
+    "url": "https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-rMaMe32qQkA/rMaMe32qQkA.m4a",
+    "source": "https://www.youtube.com/watch?v=rMaMe32qQkA"
+  },
+  {
     "id": "Qxor6jpfSiU",
     "title": "The only software that didn’t break this week...",
     "description": "Use all your coding agents side by side in one IDE with JetBrains Air: https://jb.gg/https://jb.gg/JetBrainsAir-in-IDEs\n\nSolid 2.0 is the framework's first major release in over five years. Why should you care? Let's dive in.\n\nWant more Fireship?\n\n🗞️ Newsletter: https://bytes.dev\n🧠 Courses: https://fireship.dev",
@@ -46,17 +58,5 @@
     "size": 5393004,
     "url": "https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-1FurWDiK9A4/1FurWDiK9A4.m4a",
     "source": "https://www.youtube.com/watch?v=1FurWDiK9A4"
-  },
-  {
-    "id": "pf5tXJZM1Rw",
-    "title": "OpenAI just found 948 ways to root your Linux box...",
-    "description": "Greptile is the only AI code reviewer that actually runs your code. Try it for free: https://greptile.com/go/fireship\n\nA model you're not allowed to use just tore through the Linux kernel and came back with 948 root exploits... let's break it down.\n\nWant more Fireship?\n\n🗞️ Newsletter: https://bytes.dev\n🧠 Courses: https://fireship.dev",
-    "author": "Fireship",
-    "image": "https://i.ytimg.com/vi_webp/pf5tXJZM1Rw/maxresdefault.webp",
-    "duration": 390,
-    "published": "2026-11-09T21:04:16+00:00",
-    "size": 6304753,
-    "url": "https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-pf5tXJZM1Rw/pf5tXJZM1Rw.m4a",
-    "source": "https://www.youtube.com/watch?v=pf5tXJZM1Rw"
   }
 ]

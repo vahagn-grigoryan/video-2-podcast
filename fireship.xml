@@ -8,6 +8,23 @@
     <itunes:image href="https://vahagn-grigoryan.github.io/video-2-podcast/fireship-cover-2.jpg"/>
     <itunes:explicit>false</itunes:explicit>
     <item>
+      <title>If you’ve deployed anything since 2015, I have bad news...</title>
+      <description>Paper gives your coding agent a design canvas built on real HTML and CSS. Try it: https://paper.design/?utm_source=youtube&amp;utm_medium=sponsor&amp;utm_campaign=fireship&amp;utm_content=fireship-1
+
+Hackers hijacked 178 major websites through Optimizely, a single Base64 string took over Java servers, and a 10-year-old Nginx bug put 225 million websites at risk, all in three days. Let's dive in.
+
+Want more Fireship?
+
+🗞️ Newsletter: https://bytes.dev
+🧠 Courses: https://fireship.dev</description>
+      <pubDate>Fri, 20 Nov 2026 19:49:02 +0000</pubDate>
+      <guid isPermaLink="false">rMaMe32qQkA</guid>
+      <link>https://www.youtube.com/watch?v=rMaMe32qQkA</link>
+      <enclosure url="https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-rMaMe32qQkA/rMaMe32qQkA.m4a" length="5407702" type="audio/x-m4a"/>
+      <itunes:duration>334</itunes:duration>
+      <itunes:author>Fireship</itunes:author>
+    </item>
+    <item>
       <title>The only software that didn’t break this week...</title>
       <description>Use all your coding agents side by side in one IDE with JetBrains Air: https://jb.gg/https://jb.gg/JetBrainsAir-in-IDEs
 
@@ -73,23 +90,6 @@ Want more Fireship?
       <link>https://www.youtube.com/watch?v=1FurWDiK9A4</link>
       <enclosure url="https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-1FurWDiK9A4/1FurWDiK9A4.m4a" length="5393004" type="audio/x-m4a"/>
       <itunes:duration>333</itunes:duration>
-      <itunes:author>Fireship</itunes:author>
-    </item>
-    <item>
-      <title>OpenAI just found 948 ways to root your Linux box...</title>
-      <description>Greptile is the only AI code reviewer that actually runs your code. Try it for free: https://greptile.com/go/fireship
-
-A model you're not allowed to use just tore through the Linux kernel and came back with 948 root exploits... let's break it down.
-
-Want more Fireship?
-
-🗞️ Newsletter: https://bytes.dev
-🧠 Courses: https://fireship.dev</description>
-      <pubDate>Mon, 09 Nov 2026 21:04:16 +0000</pubDate>
-      <guid isPermaLink="false">pf5tXJZM1Rw</guid>
-      <link>https://www.youtube.com/watch?v=pf5tXJZM1Rw</link>
-      <enclosure url="https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-pf5tXJZM1Rw/pf5tXJZM1Rw.m4a" length="6304753" type="audio/x-m4a"/>
-      <itunes:duration>390</itunes:duration>
       <itunes:author>Fireship</itunes:author>
     </item>
   </channel>
