@@ -8,6 +8,23 @@
     <itunes:image href="https://vahagn-grigoryan.github.io/video-2-podcast/fireship-cover-2.jpg"/>
     <itunes:explicit>false</itunes:explicit>
     <item>
+      <title>The wild world of tech in 2027...</title>
+      <description>Get 67% off VPS hosting with Hostinger's Black Friday sale. Use code FIRESHIP for an extra discount - https://hostinger.com/fireship
+
+The junior dev job is dead, open source is drowning in slop, and npm install is a gamble. Here are 10 trends every dev needs to watch in 2027 to avoid the permanent underclass.
+
+Want more Fireship?
+
+🗞️ Newsletter: https://bytes.dev
+🧠 Courses: https://fireship.dev</description>
+      <pubDate>Fri, 27 Nov 2026 16:08:25 +0000</pubDate>
+      <guid isPermaLink="false">sPGzM3ktJVE</guid>
+      <link>https://www.youtube.com/watch?v=sPGzM3ktJVE</link>
+      <enclosure url="https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-sPGzM3ktJVE/sPGzM3ktJVE.m4a" length="11266896" type="audio/x-m4a"/>
+      <itunes:duration>697</itunes:duration>
+      <itunes:author>Fireship</itunes:author>
+    </item>
+    <item>
       <title>17 million lines of AI slop just cracked a 167-year-old math problem...</title>
       <description>Start a free 14-day CodeRabbit Explain trial, no credit card required: https://coderabbit.link/fireship-012
 
@@ -73,23 +90,6 @@ Want more Fireship?
       <link>https://www.youtube.com/watch?v=Qxor6jpfSiU</link>
       <enclosure url="https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-Qxor6jpfSiU/Qxor6jpfSiU.m4a" length="5392639" type="audio/x-m4a"/>
       <itunes:duration>333</itunes:duration>
-      <itunes:author>Fireship</itunes:author>
-    </item>
-    <item>
-      <title>The $7 billion bug hiding inside Microsoft’s network...</title>
-      <description>OpenRouter gives you one API for every AI model that routes and governs every request, so your AI is better, faster, and cheaper. Try it free: https://openrouter.ai/?utm_source=fireship&amp;utm_medium=video&amp;utm_campaign=2026-11_dev-sponsorships&amp;utm_content=description
-
-Microsoft took down Exchange Online for roughly 36 hours with a routine network capacity upgrade, so let’s break down what actually failed, why turning it off and on again didn’t work, and whether it had anything to do with the FAA grounding every flight in America.
-
-Want more Fireship?
-
-🗞️ Newsletter: https://bytes.dev
-🧠 Courses: https://fireship.dev</description>
-      <pubDate>Mon, 16 Nov 2026 20:18:59 +0000</pubDate>
-      <guid isPermaLink="false">ytmawkPTP24</guid>
-      <link>https://www.youtube.com/watch?v=ytmawkPTP24</link>
-      <enclosure url="https://github.com/vahagn-grigoryan/video-2-podcast/releases/download/ep-ytmawkPTP24/ytmawkPTP24.m4a" length="6177827" type="audio/x-m4a"/>
-      <itunes:duration>382</itunes:duration>
       <itunes:author>Fireship</itunes:author>
     </item>
   </channel>
